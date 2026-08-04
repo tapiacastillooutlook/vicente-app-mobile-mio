@@ -5,6 +5,9 @@ import 'core/theme/app_theme.dart';
 import 'ui/features/auth/view_models/auth_view_model.dart';
 import 'ui/features/auth/views/login_view.dart';
 import 'ui/features/home/views/home_view.dart';
+import 'ui/features/sightings/view_models/sightings_view_model.dart';
+import 'ui/features/codex/view_models/codex_view_model.dart';
+import 'ui/features/scanner/view_models/scanner_view_model.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +26,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthViewModel()),
+        ChangeNotifierProvider(create: (_) => SightingsViewModel()),
+        ChangeNotifierProvider(create: (_) => CodexViewModel()),
+        ChangeNotifierProvider(create: (_) => ScannerViewModel()),
       ],
       child: MaterialApp(
         title: 'Clase App Mobile',
